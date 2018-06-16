@@ -1,29 +1,11 @@
 # RealTimeAnalyticsDashboard
-
-
-## Introduction
-
-This project is part of course Specialization in Big Data with Hadoop & Spark by CLOUD X LAB.
-
-Taught By : Sandeep Giri , Abhinav Singh 
-
-</br>
-
 ## Overview:
-
 
 Built a real-time analytics dashboard to visualize the number of orders getting shipped every minute to improve the performance of their logistics of a ecommerce company.
 
-
-<br>
-
 ## Technology stack
 
-![alt text](https://github.com/RepakaRamateja/RealTimeAnalyticsDashboard/blob/master/stack.png)
-
-
-</br>    
-
+![](stack.png)
 
 <table>
 <thead>
@@ -35,19 +17,19 @@ Built a real-time analytics dashboard to visualize the number of orders getting 
 <tbody>
 	<tr>
 		<td>Front-End</td>
-		<td> HTML5, Bootstrap, CSS3, Socket.IO, highcharts.js </td>
+		<td> HTML5, Bootstrap, CSS3, Socket.IO, Highcharts.js </td>
 	</tr>
 	<tr>
 		<td>Back-End</td>
-		<td>Express, Node.js</td>
+		<td>Express.js , Node.js</td>
 	</tr>
   <tr>
 		<td>Cluster Computing Framework</td>
-		<td>Apache Spark (python)</td>
+		<td>Apache Spark (Python)</td>
 	</tr>
 	<tr>
 		<td>Message Broker</td>
-		<td>Apache kafka</td>
+		<td>Apache Kafka</td>
 	</tr>
 	<tr>
 		<td>Environment</td>
@@ -56,23 +38,15 @@ Built a real-time analytics dashboard to visualize the number of orders getting 
 </tbody>
 </table>
 
-
-
-</br>
-
 ## Architecture
 
-</br>
+![](architecture.png)
 
-![alt text](https://github.com/RepakaRamateja/RealTimeAnalyticsDashboard/blob/master/architecture.png)
-
-</br>
-
- Step1:
+ **Step1:**
 
 </br>
 
- Data set containing CSV files
+ **Data set containing CSV files**
 
  Since we do not have an online e-commerce portal in place, we took a dataset containing CSV files for simulating a ecommerce portal.
 
@@ -88,9 +62,9 @@ Built a real-time analytics dashboard to visualize the number of orders getting 
 
 </br>
 
- Step2:
+ **Step2:
 
- Creation of a Topic using Apache Kafka
+ **Creation of a Topic using Apache Kafka**
 
  Command to create topic 
 
@@ -107,9 +81,9 @@ Built a real-time analytics dashboard to visualize the number of orders getting 
 
 </br>
 
- Step3:
+ **Step3:**
 
- Spark Streaming and Kafka integration
+ **Spark Streaming and Kafka integration**
 
  Spark streaming code takes data from Kafka topic in a window of 60 seconds, process it so that we have the total count of each unique order status in that 60 seconds window. After processing the total count of each unique order status gets pushed to new Kafka topic.
 
@@ -129,9 +103,9 @@ command to create topic
 
 </br>
 
- Step4:
+ **Step4:**
 
- now one minute topic has info like below
+ **now one minute topic has info like below**
 
  {
     "shipped": 657,
@@ -153,13 +127,9 @@ command to create topic
 
  node index.js
  
- 
-
-</br>
- 
 Initial output:
 
-![alt text](https://github.com/RepakaRamateja/RealTimeAnalyticsDashboard/blob/master/initial.png)
+![](initial.png)
 
 
 Later: 
@@ -171,15 +141,4 @@ Later:
 
 
 
-![alt text](https://github.com/RepakaRamateja/RealTimeAnalyticsDashboard/blob/master/final.png)
-
-
-</br>
-
-click the below link to see more information about this project 
-
-https://cloudxlab.com/blog/real-time-analytics-dashboard-with-apache-spark-kafka/
-
- 
-</br>
-
+![](final.png)
